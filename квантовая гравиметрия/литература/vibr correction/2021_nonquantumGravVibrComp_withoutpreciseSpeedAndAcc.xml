@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Publishing with OASIS Tables v3.0 20080202//EN" "journalpub-oasis3.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:oasis="http://docs.oasis-open.org/ns/oasis-exchange/table" xml:lang="en" dtd-version="3.0"><?xmltex \makeatother\@nolinetrue\makeatletter?>
+  <front>
+    <journal-meta><journal-id journal-id-type="publisher">GI</journal-id><journal-title-group>
+    <journal-title>Geoscientific Instrumentation, Methods and Data Systems</journal-title>
+    <abbrev-journal-title abbrev-type="publisher">GI</abbrev-journal-title><abbrev-journal-title abbrev-type="nlm-ta">Geosci. Instrum. Method. Data Syst.</abbrev-journal-title>
+  </journal-title-group><issn pub-type="epub">2193-0864</issn><publisher>
+    <publisher-name>Copernicus Publications</publisher-name>
+    <publisher-loc>Göttingen, Germany</publisher-loc>
+  </publisher></journal-meta>
+    <article-meta>
+      <article-id pub-id-type="doi">10.5194/gi-10-113-2021</article-id><title-group><article-title>Vibration error compensation algorithm in the development<?xmltex \hack{\break}?> of laser
+interference absolute gravimeters</article-title><alt-title>Vibration error compensation algorithm in the development</alt-title>
+      </title-group><?xmltex \runningtitle{Vibration error compensation algorithm in the development}?><?xmltex \runningauthor{Q.~Wu et~al.}?>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes" rid="aff1">
+          <name><surname>Wu</surname><given-names>Qiong</given-names></name>
+          <email>wuqiong@cea-igp.ac.cn</email>
+        <ext-link>https://orcid.org/0000-0002-7182-6702</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1">
+          <name><surname>Teng</surname><given-names>Yuntian</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1">
+          <name><surname>Wang</surname><given-names>Xiaomei</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1 aff2">
+          <name><surname>Wu</surname><given-names>Yanxiong</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1">
+          <name><surname>Zhang</surname><given-names>Yang</given-names></name>
+          
+        </contrib>
+        <aff id="aff1"><label>1</label><institution>Department of advanced geophysical technology, Institute of Geophysics, China Earthquake Administration,<?xmltex \hack{\break}?> Beijing,
+100081, China</institution>
+        </aff>
+        <aff id="aff2"><label>2</label><institution>Department of Electronic Science and Control Engineering, Institute of Disaster Prevention, Sanhe, 065201, China</institution>
+        </aff>
+      </contrib-group>
+      <author-notes><corresp id="corr1">Qiong Wu (wuqiong@cea-igp.ac.cn)</corresp></author-notes><pub-date><day>10</day><month>June</month><year>2021</year></pub-date>
+      
+      <volume>10</volume>
+      <issue>1</issue>
+      <fpage>113</fpage><lpage>122</lpage>
+      <history>
+        <date date-type="received"><day>25</day><month>September</month><year>2020</year></date>
+           <date date-type="accepted"><day>10</day><month>May</month><year>2021</year></date>
+           <date date-type="rev-recd"><day>7</day><month>April</month><year>2021</year></date>
+           <date date-type="rev-request"><day>27</day><month>November</month><year>2020</year></date>
+      </history>
+      <permissions>
+        <copyright-statement>Copyright: © 2021 Qiong Wu et al.</copyright-statement>
+        <copyright-year>2021</copyright-year>
+      <license license-type="open-access"><license-p>This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this licence, visit <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link></license-p></license></permissions><self-uri xlink:href="https://gi.copernicus.org/articles/10/113/2021/gi-10-113-2021.html">This article is available from https://gi.copernicus.org/articles/10/113/2021/gi-10-113-2021.html</self-uri><self-uri xlink:href="https://gi.copernicus.org/articles/10/113/2021/gi-10-113-2021.pdf">The full text article is available as a PDF file from https://gi.copernicus.org/articles/10/113/2021/gi-10-113-2021.pdf</self-uri>
+      <abstract><title>Abstract</title>
+    <p id="d1e128">Measurement error arising from vibration interference is recognized as the
+primary obstacle limiting the accuracy and stability of laser interference
+absolute gravimeters. The present work addresses this issue by proposing a
+global search optimization algorithm that determines the optimal absolute
+value of gravity based on the measured time–displacement coordinates of a
+falling body and the signal obtained from the passive vibration isolation
+system of the inertial reference corner cube in a laser interference absolute
+gravimeter. Results of numerical calculations conducted under vibration
+interference conditions with added white noise resulting in a signal-to-noise
+ratio of 40 <inline-formula><mml:math id="M1" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">dB</mml:mi></mml:mrow></mml:math></inline-formula> demonstrate the following.
+<list list-type="order"><list-item>
+      <p id="d1e141">The accuracy and
+standard deviation of the gravimeter obtained using the proposed algorithm are
+<inline-formula><mml:math id="M2" display="inline"><mml:mo>-</mml:mo></mml:math></inline-formula>0.04 <inline-formula><mml:math id="M3" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula> (<inline-formula><mml:math id="M4" display="inline"><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mspace linebreak="nobreak" width="0.125em"/><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">8</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M5" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">m</mml:mi><mml:mspace linebreak="nobreak" width="0.125em"/><mml:msup><mml:mi mathvariant="normal">s</mml:mi><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula>) and
+0.24 <inline-formula><mml:math id="M6" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>, respectively, while those values obtained by the
+standard least-squares solution are 10.19 and
+154.11 <inline-formula><mml:math id="M7" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>, respectively.</p></list-item><list-item>
+      <p id="d1e228">The test results indicate that the
+average response of the reference value of acceleration due to gravity
+superimposed by a disturbance of 1.00 <inline-formula><mml:math id="M8" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula> is
+1.01 <inline-formula><mml:math id="M9" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula> using the proposed algorithm and 0.87 <inline-formula><mml:math id="M10" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>
+using the standard least-squares solution.</p></list-item></list></p>
+  </abstract>
+    </article-meta>
+  </front>
+<body>
+      
+
+      <?xmltex \hack{\newpage}?>
+<sec id="Ch1.S1" sec-type="intro">
+  <label>1</label><title>Introduction</title>
+      <p id="d1e272">Laser interference absolute gravimeters are high-precision gravimetry
+instruments that are widely used in various fields such as metrology
+(Ouedraogo et al., 2007), solid geophysics (D'Agostino et al., 2008), seismic
+observation (Timofeev et al., 2018; Zhang, et al., 2019), and geodesy (Xing
+et al., 2017). These instruments measure the vertical position of a
+free-falling test body in a drop chamber under vacuum using a laser
+interferometer that generates an optical interference fringe each time the
+test body falls a distance equal to one-half of the wavelength of the laser
+light, and the timing of the fringes is determined from an atomic clock, which
+thereby provides highly precise time–displacement coordinates to determine the
+acceleration of the test body due to gravity.</p>
+      <p id="d1e275">However, vibrations caused by the servomotor-driven mechanism in laser
+interference gravimeters and environmental vibrations are coupled during the
+measurement process and introduce vibration error into the measurement result
+by affecting the inertial state of the reference corner cube (Wu et al.,
+2012). This vibration error has become the primary obstacle limiting the
+accuracy and stability of laser interference absolute gravimeters and affects
+absolute gravity measurement instruments based on the principle of atomic
+interference (Wu et al., 2019; Ménoret et al., 2018).</p>
+      <p id="d1e278">Numerous approaches have been developed for addressing the critical issue of
+vibration error. For example, the Micro-g LaCoste FG5 absolute gravimeter
+based on laser interferometry has obtained nearly ideal vibration error
+handling using a delicate design mechanism denoted as a superspring (Rinker,
+1983; Hinderer et al., 2002). However, this solution suffers<?pagebreak page114?> from a
+complicated structure and inflexibility for extending its application range.
+Other approaches developed for this purpose mainly include decreasing the
+self-system vibration of the instrument (Niebauer et al., 2011), vibration
+isolation technology (Nelson et al., 1991; Newell et al., 1997; Richman
+et al., 1998; Li et al., 2014), and vibration error compensation algorithms
+(Long et al., 2012; Wang et al., 2017). One of the simplest and most feasible
+technologies employs a passive vibration isolation system (PVIS) to suspend
+the reference corner cube (Zumberge et al., 1986). However, current practical
+applications of the PVIS remain far from meeting the requirements of
+instrument stability, accuracy, and precision under different observation
+conditions.</p>
+      <p id="d1e281">This issue is addressed in the present work by applying the PVIS in
+conjunction with a specifically developed vibration error compensation
+algorithm. To this end, we first analyze the PVIS of the reference corner cube
+to obtain the transfer function of the system as a vibration isolation device
+and a signal detection device and thereby establish a vibration interference
+error model. Then, the error model is employed to develop a new vibration
+error compensation algorithm (VECA) that conducts a global search based on a
+genetic algorithm (Wu et al., 2018) to determine the optimal absolute value of
+gravity based on the measured time–displacement coordinates of the falling
+body and the signal obtained from the PVIS of the reference corner cube in the
+laser interference absolute gravimeter. Finally, the accuracy, standard
+deviation and resolution of the gravimeter obtained using the proposed
+algorithm are evaluated by numerical calculations conducted under vibration
+interference conditions, and the results are compared with those obtained
+using the standard linear least-squares solution (LSS). The results
+demonstrate that the proposed algorithm provides a substantial anti-vibration
+capability and is worthy of application within absolute gravimeter designs based
+on laser interferometry.</p>
+</sec>
+<sec id="Ch1.S2">
+  <label>2</label><title>Construction of the vibration error model</title>
+<sec id="Ch1.S2.SS1">
+  <label>2.1</label><title>System analysis of the PVIS</title>
+      <p id="d1e299">As illustrated in Fig. 1, the main component of a laser interference
+absolute gravimeter is a drop chamber under vacuum, inside which the test mass
+serving as a falling body (FB) is positioned within a cart mechanism that
+serves to raise, release, and catch the FB. There is no mechanical connection
+between the FB and the cart. The cart mechanism is driven by a servomotor
+installed on the outside of the drop chamber. After raising the FB to its
+initial position, the cart is accelerated downward by the servomotor at an
+acceleration rate slightly greater than that due to gravity until the FB is
+freely falling. Then, the motion of the cart is matched with the free-falling
+motion of the FB, and the time–displacement coordinates of the FB relative to
+the reference corner cube are measured. However, random vibrations are
+introduced during the measurement process, which are caused by the servomotor
+in the instrument and human activities within the measurement
+environment. Accordingly, the vibration error is coupled with the calculation
+results for the absolute value of the acceleration due to gravity.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F1"><?xmltex \currentcnt{1}?><?xmltex \def\figurename{Figure}?><label>Figure 1</label><caption><p id="d1e304">Assembly diagram of the proposed absolute gravimeter.</p></caption>
+          <?xmltex \igopts{width=241.848425pt}?><graphic xlink:href="https://gi.copernicus.org/articles/10/113/2021/gi-10-113-2021-f01.png"/>
+
+        </fig>
+
+      <p id="d1e313">The PVIS used to reduce the influence of vibration interference on the
+inertial state of the reference corner cube is illustrated schematically in
+Fig. 2, in which the reference corner cube and the mass block of the PVIS
+assembly of mass <inline-formula><mml:math id="M11" display="inline"><mml:mi>M</mml:mi></mml:math></inline-formula> are connected with the ground by a spring of stiffness
+<inline-formula><mml:math id="M12" display="inline"><mml:mi>K</mml:mi></mml:math></inline-formula> and a damping mechanism with a damping factor <inline-formula><mml:math id="M13" display="inline"><mml:mi mathvariant="italic">σ</mml:mi></mml:math></inline-formula>. Damping is
+produced by a mechanism employing a coil and magnetic steel structure that is
+commonly used in seismometers, where the value of <inline-formula><mml:math id="M14" display="inline"><mml:mi mathvariant="italic">σ</mml:mi></mml:math></inline-formula> is adjusted by
+varying the coil current. The displacement <inline-formula><mml:math id="M15" display="inline"><mml:mrow><mml:mi>x</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> of the assembly relative
+to the ground is directly output by a precisely designed differential
+capacitance sensor and its corresponding circuitry. In addition, the absolute
+displacement of the ground is defined as <inline-formula><mml:math id="M16" display="inline"><mml:mrow><mml:mi>y</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula>, and the absolute
+displacement of the assembly with respect to the earth centre of mass is
+defined as <inline-formula><mml:math id="M17" display="inline"><mml:mrow><mml:mi>z</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula>. Finally, we note that the PVIS applies no closed-loop
+feedback at any point. Here, we found in actual experiments that the error
+arising from the feedback control system, particularly the overshoot, derived
+from another source in the measurements.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F2" specific-use="star"><?xmltex \currentcnt{2}?><?xmltex \def\figurename{Figure}?><label>Figure 2</label><caption><p id="d1e390">Schematic illustrating the passive vibration isolation
+system (PVIS).</p></caption>
+          <?xmltex \igopts{width=341.433071pt}?><graphic xlink:href="https://gi.copernicus.org/articles/10/113/2021/gi-10-113-2021-f02.png"/>
+
+        </fig>
+
+      <p id="d1e399">For conducting system analysis of the PVIS, we first note from Fig. 2 that <inline-formula><mml:math id="M18" display="inline"><mml:mrow><mml:mi>x</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mi>z</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo><mml:mo>-</mml:mo><mml:mi>y</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> and arbitrarily define the positive direction as vertically
+upward from the centre of mass of the earth.  Accordingly, the dynamic
+equation of motion of the mass block of the PVIS and reference corner-cube
+assembly is given as follows (Thomson and Dahleh, 1972):
+
+                <disp-formula id="Ch1.E1" content-type="numbered"><label>1</label><mml:math id="M19" display="block"><mml:mstyle class="stylechange" displaystyle="true"/><mml:mrow><mml:mstyle displaystyle="true" class="stylechange"/><mml:mi>M</mml:mi><mml:mover accent="true"><mml:mi>z</mml:mi><mml:mo mathvariant="normal">¨</mml:mo></mml:mover><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo><mml:mo>+</mml:mo><mml:mi mathvariant="italic">σ</mml:mi><mml:mover accent="true"><mml:mi>z</mml:mi><mml:mo mathvariant="normal">˙</mml:mo></mml:mover><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo><mml:mo>+</mml:mo><mml:mi>K</mml:mi><mml:mi>x</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0</mml:mn><mml:mo>,</mml:mo></mml:mrow></mml:math></disp-formula>
+
+          and its Laplace transform is
+
+                <disp-formula specific-use="align" content-type="numbered"><mml:math id="M20" display="block"><mml:mtable displaystyle="true"><mml:mlabeledtr id="Ch1.E2"><mml:mtd><mml:mtext>2</mml:mtext></mml:mtd><mml:mtd><mml:mstyle class="stylechange" displaystyle="true"/></mml:mtd><mml:mtd><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mi>M</mml:mi><mml:msup><mml:mi>s</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msup><mml:mi>Z</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo><mml:mo>+</mml:mo><mml:mi mathvariant="italic">σ</mml:mi><mml:mi>s</mml:mi><mml:mi>Z</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo><mml:mo>+</mml:mo><mml:mi>K</mml:mi><mml:mi>X</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0</mml:mn><mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mlabeledtr><mml:mlabeledtr id="Ch1.E3"><mml:mtd><mml:mtext>3</mml:mtext></mml:mtd><mml:mtd><mml:mstyle displaystyle="true" class="stylechange"/></mml:mtd><mml:mtd><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mi>X</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mi>Z</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo><mml:mo>-</mml:mo><mml:mi>Y</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo><mml:mo>.</mml:mo></mml:mrow></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula>
+
+           <?pagebreak page115?> The transfer function of the vibration isolation effect of the PVIS can be
+given as follows:
+
+                <disp-formula id="Ch1.E4" content-type="numbered"><label>4</label><mml:math id="M21" display="block"><mml:mstyle class="stylechange" displaystyle="true"/><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:msub><mml:mi mathvariant="normal">Φ</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mrow><mml:mi>Z</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mi>Y</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mfrac></mml:mstyle><mml:mo>=</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mi>K</mml:mi><mml:mrow><mml:mi>M</mml:mi><mml:msup><mml:mi>s</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mi mathvariant="italic">σ</mml:mi><mml:mi>s</mml:mi><mml:mo>+</mml:mo><mml:mi>K</mml:mi></mml:mrow></mml:mfrac></mml:mstyle><mml:mo>=</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mrow><mml:msubsup><mml:mi mathvariant="italic">ω</mml:mi><mml:mn mathvariant="normal">0</mml:mn><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup></mml:mrow><mml:mrow><mml:msup><mml:mi>s</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mi mathvariant="italic">β</mml:mi><mml:mi>s</mml:mi><mml:mo>+</mml:mo><mml:msubsup><mml:mi mathvariant="italic">ω</mml:mi><mml:mn mathvariant="normal">0</mml:mn><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup></mml:mrow></mml:mfrac></mml:mstyle><mml:mo>,</mml:mo></mml:mrow></mml:math></disp-formula>
+
+          where <inline-formula><mml:math id="M22" display="inline"><mml:mrow><mml:mn mathvariant="normal">2</mml:mn><mml:mi mathvariant="italic">β</mml:mi><mml:mo>=</mml:mo><mml:mstyle displaystyle="false"><mml:mfrac style="text"><mml:mi mathvariant="italic">σ</mml:mi><mml:mi>M</mml:mi></mml:mfrac></mml:mstyle></mml:mrow></mml:math></inline-formula> and the squared intrinsic frequency
+<inline-formula><mml:math id="M23" display="inline"><mml:mrow><mml:msubsup><mml:mi mathvariant="italic">ω</mml:mi><mml:mn mathvariant="normal">0</mml:mn><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup><mml:mo>=</mml:mo><mml:mstyle displaystyle="false"><mml:mfrac style="text"><mml:mi>K</mml:mi><mml:mi>M</mml:mi></mml:mfrac></mml:mstyle></mml:mrow></mml:math></inline-formula>. The transfer function of the detection effect
+of the PVIS can be given as follows:
+
+                <disp-formula specific-use="align" content-type="numbered"><mml:math id="M24" display="block"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:msub><mml:mi mathvariant="normal">Φ</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mtd><mml:mtd><mml:mrow><mml:mstyle displaystyle="true" class="stylechange"/><mml:mspace linebreak="nobreak" width="0.25em"/><mml:mo>=</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mrow><mml:mi>X</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mi>Y</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mfrac></mml:mstyle><mml:mo>=</mml:mo><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn><mml:mo>⋅</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mrow><mml:mi>M</mml:mi><mml:msup><mml:mi>s</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mi mathvariant="italic">σ</mml:mi><mml:mi>s</mml:mi></mml:mrow><mml:mrow><mml:mi>M</mml:mi><mml:msup><mml:mi>s</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mi mathvariant="italic">σ</mml:mi><mml:mi>s</mml:mi><mml:mo>+</mml:mo><mml:mi>K</mml:mi></mml:mrow></mml:mfrac></mml:mstyle></mml:mrow></mml:mtd></mml:mtr><mml:mlabeledtr id="Ch1.E5"><mml:mtd><mml:mtext>5</mml:mtext></mml:mtd><mml:mtd><mml:mstyle class="stylechange" displaystyle="true"/></mml:mtd><mml:mtd><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mspace linebreak="nobreak" width="0.25em"/><mml:mo>=</mml:mo><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn><mml:mo>⋅</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mrow><mml:msup><mml:mi>s</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mi mathvariant="italic">β</mml:mi><mml:mi>s</mml:mi></mml:mrow><mml:mrow><mml:msup><mml:mi>s</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mi mathvariant="italic">β</mml:mi><mml:mi>s</mml:mi><mml:mo>+</mml:mo><mml:msubsup><mml:mi mathvariant="italic">ω</mml:mi><mml:mn mathvariant="normal">0</mml:mn><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup></mml:mrow></mml:mfrac></mml:mstyle><mml:mo>.</mml:mo></mml:mrow></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula>
+
+            Applying Eq. (<xref ref-type="disp-formula" rid="Ch1.E5"/>) in conjunction with Eq. (<xref ref-type="disp-formula" rid="Ch1.E3"/>) yields the
+following:
+
+                <disp-formula id="Ch1.E6" content-type="numbered"><label>6</label><mml:math id="M25" display="block"><mml:mstyle class="stylechange" displaystyle="true"/><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mi>Z</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mfenced open="(" close=")"><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mo>+</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mn mathvariant="normal">1</mml:mn><mml:mrow><mml:msub><mml:mi mathvariant="normal">Φ</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mfrac></mml:mstyle></mml:mrow></mml:mfenced><mml:mi>X</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mo>-</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mrow><mml:msubsup><mml:mi mathvariant="italic">ω</mml:mi><mml:mn mathvariant="normal">0</mml:mn><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup></mml:mrow><mml:mrow><mml:msup><mml:mi>s</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mi mathvariant="italic">β</mml:mi><mml:mi>s</mml:mi></mml:mrow></mml:mfrac></mml:mstyle><mml:mi>X</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo><mml:mo>.</mml:mo></mml:mrow></mml:math></disp-formula>
+
+          The attenuation amplitude versus frequency and phase–frequency characteristic
+curves of <inline-formula><mml:math id="M26" display="inline"><mml:mrow><mml:msub><mml:mi mathvariant="normal">Φ</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math id="M27" display="inline"><mml:mrow><mml:msub><mml:mi mathvariant="normal">Φ</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> are plotted in Fig. 2 for
+<inline-formula><mml:math id="M28" display="inline"><mml:mrow><mml:mi>K</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">50</mml:mn></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M29" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">N</mml:mi><mml:mspace linebreak="nobreak" width="0.125em"/><mml:msup><mml:mi mathvariant="normal">mm</mml:mi><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M30" display="inline"><mml:mrow><mml:mi mathvariant="italic">σ</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">60</mml:mn></mml:mrow></mml:math></inline-formula>, and <inline-formula><mml:math id="M31" display="inline"><mml:mrow><mml:mi>M</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">5</mml:mn></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M32" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">kg</mml:mi></mml:mrow></mml:math></inline-formula>. It can be
+seen from the amplitude–frequency curve that the vibration isolation operation
+of the PVIS (i.e., <inline-formula><mml:math id="M33" display="inline"><mml:mrow><mml:msub><mml:mi mathvariant="normal">Φ</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula>) attenuates signals in <inline-formula><mml:math id="M34" display="inline"><mml:mrow><mml:mi>y</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> above the
+intrinsic frequency. The vibration isolation effect will become increasingly
+obvious as the frequency of the signals increases above the intrinsic
+frequency, but these high-frequency signals after attenuation will still be
+coupled in the measurement system of the absolute gravimeter, and signals
+below the intrinsic frequency will be directly coupled into the measurement
+system without attenuation. In terms of the signal detection operation of the
+PVIS (i.e., <inline-formula><mml:math id="M35" display="inline"><mml:mrow><mml:msub><mml:mi mathvariant="normal">Φ</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula>), signals above the intrinsic frequency will be
+detected without any attenuation, but signals below the intrinsic frequency
+are attenuated.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F3" specific-use="star"><?xmltex \currentcnt{3}?><?xmltex \def\figurename{Figure}?><label>Figure 3</label><caption><p id="d1e1125">Amplitude–frequency and phase–frequency characteristic
+curves of the vibration isolation operation of the PVIS and its signal
+detection operation. Here, the phase information is not unwrapped.</p></caption>
+          <?xmltex \igopts{width=483.69685pt}?><graphic xlink:href="https://gi.copernicus.org/articles/10/113/2021/gi-10-113-2021-f03.png"/>
+
+        </fig>
+
+      <p id="d1e1134">Because of the height restrictions of the drop chamber, the free-falling
+distance of the FB is controlled within 20 <inline-formula><mml:math id="M36" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">cm</mml:mi></mml:mrow></mml:math></inline-formula>, and the free-falling
+period is about 0.2 <inline-formula><mml:math id="M37" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:math></inline-formula>, which can be regarded as the maximum period of
+the vibration interference signal with a corresponding frequency of
+5 <inline-formula><mml:math id="M38" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">Hz</mml:mi></mml:mrow></mml:math></inline-formula>. If we consider that signals with amplitude attenuations greater
+than <inline-formula><mml:math id="M39" display="inline"><mml:mo>-</mml:mo></mml:math></inline-formula>60 <inline-formula><mml:math id="M40" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">dB</mml:mi></mml:mrow></mml:math></inline-formula> are effectively attenuated, signals from approximately
+0.05 <inline-formula><mml:math id="M41" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">Hz</mml:mi></mml:mrow></mml:math></inline-formula> to the intrinsic frequency of the system will still exist in
+the output signal of the PVIS, although they will be attenuated. Meanwhile,
+signals below 0.05 <inline-formula><mml:math id="M42" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">Hz</mml:mi></mml:mrow></mml:math></inline-formula> can be considered to vary linearly with respect
+to time during the measurement period of 0.2 <inline-formula><mml:math id="M43" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:math></inline-formula>. Additionally, it can
+be seen from the phase–frequency curves in Fig. 3 that the phases of
+<inline-formula><mml:math id="M44" display="inline"><mml:mrow><mml:msub><mml:mi mathvariant="normal">Φ</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math id="M45" display="inline"><mml:mrow><mml:msub><mml:mi mathvariant="normal">Φ</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)<?pagebreak page116?></mml:mo></mml:mrow></mml:math></inline-formula> maintain a consistent relationship. Therefore,
+the PVIS can be applied as both a vibration isolation device for the reference
+corner cube and a detection sensor of the vibration signal of the reference
+corner cube simultaneously.  Most of the useful signals related to the
+disturbance error of the absolute gravity measurement in <inline-formula><mml:math id="M46" display="inline"><mml:mrow><mml:mi>Z</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> can be
+recovered by the synchronously output vibration signal <inline-formula><mml:math id="M47" display="inline"><mml:mrow><mml:mi>X</mml:mi><mml:mo>(</mml:mo><mml:mi>s</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> in conjunction
+with Eqs. (<xref ref-type="disp-formula" rid="Ch1.E4"/>) and (<xref ref-type="disp-formula" rid="Ch1.E6"/>) owing to the precise values of
+<inline-formula><mml:math id="M48" display="inline"><mml:mi mathvariant="italic">β</mml:mi></mml:math></inline-formula> and <inline-formula><mml:math id="M49" display="inline"><mml:mrow><mml:msub><mml:mi mathvariant="italic">ω</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> obtained from the PVIS hardware system.</p>
+</sec>
+<sec id="Ch1.S2.SS2">
+  <label>2.2</label><title>Mathematical model of the vibration error</title>
+      <p id="d1e1294">In absolute gravimetry, the general method for treating a vertical gradient of
+the earth's surface is that the vertical gravity gradient of the measurement
+point is first assumed to be 0, and then the absolute acceleration of the
+effective height of the instrument (Zumberge, 1981; Niebauer, 1989;
+Timmen, 2003) is obtained using the absolute gravity measurement
+instrument. In addition, at least two sets of relative gravimeters are used to
+measure the vertical gravity gradient of the measurement point either before
+or after conducting the absolute gravity measurement. Finally, the absolute
+gravity measurement value of the effective height position is calculated
+relative to the ground or other height position based on the obtained vertical
+gradient. Because this paper mainly analyses the impact of vibration errors on
+gravity measurement results, we adopt the following simplified model for the
+factors affecting the measured displacement <inline-formula><mml:math id="M50" display="inline"><mml:mrow><mml:mi>S</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> of the FB as a
+function of time <inline-formula><mml:math id="M51" display="inline"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula>, where <inline-formula><mml:math id="M52" display="inline"><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn><mml:mo>,</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mo>,</mml:mo><mml:mi mathvariant="normal">…</mml:mi><mml:mo>,</mml:mo><mml:mi>N</mml:mi></mml:mrow></mml:math></inline-formula> indexes the time
+coordinates established according to the rubidium atomic frequency standard:
+
+                <disp-formula id="Ch1.E7" content-type="numbered"><label>7</label><mml:math id="M53" display="block"><mml:mstyle class="stylechange" displaystyle="true"/><mml:mrow><mml:mstyle displaystyle="true" class="stylechange"/><mml:mi>S</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>V</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mn mathvariant="normal">0.5</mml:mn><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:msubsup><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup><mml:mo>+</mml:mo><mml:mi>d</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>+</mml:mo><mml:mi>e</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>.</mml:mo></mml:mrow></mml:math></disp-formula>
+
+          Here, <inline-formula><mml:math id="M54" display="inline"><mml:mrow><mml:msub><mml:mi>S</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math id="M55" display="inline"><mml:mrow><mml:msub><mml:mi>V</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> are the initial displacement and velocity of the FB,
+<inline-formula><mml:math id="M56" display="inline"><mml:mrow><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> is the absolute value of gravity to be determined from the measurement
+point, <inline-formula><mml:math id="M57" display="inline"><mml:mrow><mml:mi>d</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> is the vibrational interference coupled to the measurement
+system, and <inline-formula><mml:math id="M58" display="inline"><mml:mrow><mml:mi>e</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula>) is additive white noise conforming to a normal
+distribution with a mean of 0 and a variance of 1. Here, <inline-formula><mml:math id="M59" display="inline"><mml:mrow><mml:mi>d</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> is the
+signal of interest that must be uncoupled from the measurement. For this
+purpose, we express the signal <inline-formula><mml:math id="M60" display="inline"><mml:mrow><mml:mi>x</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> output from the PVIS as
+
+                <disp-formula id="Ch1.E8" content-type="numbered"><label>8</label><mml:math id="M61" display="block"><mml:mstyle class="stylechange" displaystyle="true"/><mml:mrow><mml:mstyle displaystyle="true" class="stylechange"/><mml:mi>x</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mi>M</mml:mi></mml:msubsup><mml:msub><mml:mi>A</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mi>cos⁡</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi mathvariant="italic">ω</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi mathvariant="italic">φ</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>+</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0</mml:mn></mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup><mml:msub><mml:mi>p</mml:mi><mml:mi>j</mml:mi></mml:msub><mml:msubsup><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:msubsup><mml:mo>,</mml:mo></mml:mrow></mml:math></disp-formula>
+
+          where <inline-formula><mml:math id="M62" display="inline"><mml:mrow><mml:msub><mml:mi>A</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M63" display="inline"><mml:mrow><mml:msub><mml:mi mathvariant="italic">ω</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula>, and <inline-formula><mml:math id="M64" display="inline"><mml:mrow><mml:msub><mml:mi mathvariant="italic">φ</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> are the amplitude, angular
+frequency, and initial phase of the <inline-formula><mml:math id="M65" display="inline"><mml:mi>k</mml:mi></mml:math></inline-formula>th harmonic signal, respectively. In
+addition, the second term on the right is the trend component with <inline-formula><mml:math id="M66" display="inline"><mml:mrow><mml:msub><mml:mi>p</mml:mi><mml:mi>j</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> as
+the coefficient, where <inline-formula><mml:math id="M67" display="inline"><mml:mrow><mml:msubsup><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:msubsup></mml:mrow></mml:math></inline-formula> is <inline-formula><mml:math id="M68" display="inline"><mml:mrow><mml:msubsup><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msubsup><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M69" display="inline"><mml:mrow><mml:msubsup><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msubsup><mml:mo>=</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula>, and
+<inline-formula><mml:math id="M70" display="inline"><mml:mrow><mml:msubsup><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup></mml:mrow></mml:math></inline-formula>, while <inline-formula><mml:math id="M71" display="inline"><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0</mml:mn><mml:mo>,</mml:mo><mml:mspace linebreak="nobreak" width="0.125em"/><mml:mn mathvariant="normal">1</mml:mn><mml:mo>,</mml:mo><mml:mspace width="0.125em" linebreak="nobreak"/><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:math></inline-formula>.</p>
+      <p id="d1e1758">Extracting <inline-formula><mml:math id="M72" display="inline"><mml:mrow><mml:mi>d</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> from<inline-formula><mml:math id="M73" display="inline"><mml:mrow><mml:mspace width="0.125em" linebreak="nobreak"/><mml:mi>x</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> requires that we consider the
+following two important aspects.
+<list list-type="order"><list-item>
+      <?pagebreak page117?><p id="d1e1798">The voltage signal <inline-formula><mml:math id="M74" display="inline"><mml:mrow><mml:mi>x</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> derived from the PVIS has not been
+converted into a displacement via sensitivity calibration. However, the
+calibration error is on the order of 10<inline-formula><mml:math id="M75" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">7</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> <inline-formula><mml:math id="M76" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">m</mml:mi></mml:mrow></mml:math></inline-formula> generally, and the
+error in the displacement measurement of a microgravity absolute gravimeter
+must be less than 10<inline-formula><mml:math id="M77" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">11</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> <inline-formula><mml:math id="M78" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">m</mml:mi></mml:mrow></mml:math></inline-formula> at least (Christian,
+2008). Accordingly, the sensitivity calibration error is much greater than the
+allowable error range of a microgravity absolute gravimeter.</p></list-item><list-item>
+      <p id="d1e1859">As described in Sect. 2.1, the vibration signal <inline-formula><mml:math id="M79" display="inline"><mml:mrow><mml:mi>x</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> is not the
+absolute displacement of the reference corner cube <inline-formula><mml:math id="M80" display="inline"><mml:mrow><mml:mi>z</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula>, but it is rather the
+result of the system transfer function, as described in Eq. (<xref ref-type="disp-formula" rid="Ch1.E6"/>), with
+which the low-frequency signals are subject to attenuation.</p></list-item></list></p>
+      <p id="d1e1895">These issues are addressed to extract <inline-formula><mml:math id="M81" display="inline"><mml:mrow><mml:mi>d</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> from <inline-formula><mml:math id="M82" display="inline"><mml:mrow><mml:mi>x</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> by
+introducing comprehensive coefficients <inline-formula><mml:math id="M83" display="inline"><mml:mrow><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>a</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M84" display="inline"><mml:mrow><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi mathvariant="italic">φ</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>, and <inline-formula><mml:math id="M85" display="inline"><mml:mrow><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>
+influencing <inline-formula><mml:math id="M86" display="inline"><mml:mrow><mml:msub><mml:mi>A</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M87" display="inline"><mml:mrow><mml:msub><mml:mi mathvariant="italic">ω</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula>, and <inline-formula><mml:math id="M88" display="inline"><mml:mrow><mml:msub><mml:mi>p</mml:mi><mml:mi>j</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> to obtain the following
+(Akaike, 1980):
+            <disp-formula id="Ch1.E9" content-type="numbered"><label>9</label><mml:math id="M89" display="block"><mml:mtable rowspacing="0.2ex" class="split" columnspacing="1em" displaystyle="true" columnalign="right left"><mml:mtr><mml:mtd><mml:mrow><mml:mi mathvariant="normal">d</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:mtd><mml:mtd><mml:mrow><mml:mo>=</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mi>M</mml:mi></mml:msubsup><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>a</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mi>A</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mi>cos⁡</mml:mi><mml:mfenced open="(" close=")"><mml:mrow><mml:msub><mml:mi mathvariant="italic">ω</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi mathvariant="italic">φ</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi mathvariant="italic">φ</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfenced></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd/><mml:mtd><mml:mrow><mml:mo>+</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0</mml:mn></mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mi>p</mml:mi><mml:mi>j</mml:mi></mml:msub><mml:msubsup><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:msubsup><mml:mo>.</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></disp-formula>
+          This equation can be rewritten as
+            <disp-formula id="Ch1.E10" content-type="numbered"><label>10</label><mml:math id="M90" display="block"><mml:mtable columnspacing="1em" rowspacing="0.2ex" class="split" displaystyle="true" columnalign="right left"><mml:mtr><mml:mtd><mml:mrow><mml:mi mathvariant="normal">d</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:mtd><mml:mtd><mml:mrow><mml:mo>=</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mi>M</mml:mi></mml:msubsup><mml:mo>(</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mfenced open="(" close=")"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:mfenced><mml:msub><mml:mi>R</mml:mi><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mrow><mml:mn mathvariant="normal">2</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mfenced open="(" close=")"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:mfenced><mml:msub><mml:mi>R</mml:mi><mml:mrow><mml:mn mathvariant="normal">2</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd/><mml:mtd><mml:mrow><mml:mo>+</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0</mml:mn></mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mi>p</mml:mi><mml:mi>j</mml:mi></mml:msub><mml:msubsup><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:msubsup><mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></disp-formula>
+          where <inline-formula><mml:math id="M91" display="inline"><mml:mrow><mml:msub><mml:mi>T</mml:mi><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:msub><mml:mi>A</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mi>cos⁡</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi mathvariant="italic">ω</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi mathvariant="italic">φ</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula>,
+<inline-formula><mml:math id="M92" display="inline"><mml:mrow><mml:msub><mml:mi>T</mml:mi><mml:mrow><mml:mn mathvariant="normal">2</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:msub><mml:mi>A</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mi>sin⁡</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi mathvariant="italic">ω</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi mathvariant="italic">φ</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula>, and
+the correction coefficients for the harmonic components are <inline-formula><mml:math id="M93" display="inline"><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>a</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mi>cos⁡</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi mathvariant="italic">φ</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>) and <inline-formula><mml:math id="M94" display="inline"><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mrow><mml:mn mathvariant="normal">2</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mo>-</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>a</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mi>sin⁡</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi mathvariant="italic">φ</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>).
+Next, we apply Eqs. (<xref ref-type="disp-formula" rid="Ch1.E10"/>) to (<xref ref-type="disp-formula" rid="Ch1.E7"/>) as follows:
+
+                <disp-formula specific-use="align" content-type="numbered"><mml:math id="M95" display="block"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mi>S</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>=</mml:mo></mml:mrow></mml:mtd><mml:mtd><mml:mrow><mml:mstyle displaystyle="true" class="stylechange"/><mml:mspace linebreak="nobreak" width="0.25em"/><mml:msub><mml:mi>S</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>V</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mn mathvariant="normal">0.5</mml:mn><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:msubsup><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup><mml:mo>+</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mi>M</mml:mi></mml:msubsup><mml:mo>(</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:msub><mml:mi>R</mml:mi><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mtd></mml:mtr><mml:mlabeledtr id="Ch1.E11"><mml:mtd><mml:mtext>11</mml:mtext></mml:mtd><mml:mtd><mml:mstyle class="stylechange" displaystyle="true"/></mml:mtd><mml:mtd><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mspace linebreak="nobreak" width="0.25em"/><mml:mo>+</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mrow><mml:mn mathvariant="normal">2</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:msub><mml:mi>R</mml:mi><mml:mrow><mml:mn mathvariant="normal">2</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>)</mml:mo><mml:mo>+</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0</mml:mn></mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mi>p</mml:mi><mml:mi>j</mml:mi></mml:msub><mml:msubsup><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:msubsup><mml:mo>+</mml:mo><mml:mi>e</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mlabeledtr><mml:mtr><mml:mtd><mml:mrow><mml:mstyle displaystyle="true" class="stylechange"/><mml:mi>S</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>=</mml:mo></mml:mrow></mml:mtd><mml:mtd><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mspace width="0.25em" linebreak="nobreak"/><mml:mo>(</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mi>p</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>)</mml:mo><mml:mo>+</mml:mo><mml:mo>(</mml:mo><mml:msub><mml:mi>V</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mi>p</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub><mml:mo>)</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mstyle displaystyle="true" class="stylechange"/></mml:mtd><mml:mtd><mml:mrow><mml:mstyle displaystyle="true" class="stylechange"/><mml:mspace linebreak="nobreak" width="0.25em"/><mml:mo>+</mml:mo><mml:mo>(</mml:mo><mml:mn mathvariant="normal">0.5</mml:mn><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mi>p</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub><mml:mo>)</mml:mo><mml:msubsup><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup><mml:mo>+</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mi>M</mml:mi></mml:msubsup><mml:mo>(</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:msub><mml:mi>R</mml:mi><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mtd></mml:mtr><mml:mlabeledtr id="Ch1.E12"><mml:mtd><mml:mtext>12</mml:mtext></mml:mtd><mml:mtd><mml:mstyle class="stylechange" displaystyle="true"/></mml:mtd><mml:mtd><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mo>+</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mrow><mml:mn mathvariant="normal">2</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:msub><mml:mi>R</mml:mi><mml:mrow><mml:mn mathvariant="normal">2</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>)</mml:mo><mml:mo>+</mml:mo><mml:mi>e</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mlabeledtr><mml:mlabeledtr id="Ch1.E13"><mml:mtd><mml:mtext>13</mml:mtext></mml:mtd><mml:mtd><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mi>S</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>=</mml:mo></mml:mrow></mml:mtd><mml:mtd><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mspace linebreak="nobreak" width="0.25em"/><mml:msub><mml:mi>Q</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>Q</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>Q</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub><mml:msubsup><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup><mml:mo>+</mml:mo><mml:mover accent="true"><mml:mi>d</mml:mi><mml:mo mathvariant="normal" stretchy="false">^</mml:mo></mml:mover><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>+</mml:mo><mml:mi>e</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula>
+
+            where <inline-formula><mml:math id="M96" display="inline"><mml:mrow><mml:msub><mml:mi>Q</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>V</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mi>p</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M97" display="inline"><mml:mrow><mml:msub><mml:mi>Q</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mi>p</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula>, and
+
+                <disp-formula id="Ch1.E14" content-type="numbered"><label>14</label><mml:math id="M98" display="block"><mml:mstyle displaystyle="true" class="stylechange"/><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mover accent="true"><mml:mi>d</mml:mi><mml:mo mathvariant="normal" stretchy="false">^</mml:mo></mml:mover><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mi>M</mml:mi></mml:msubsup><mml:msub><mml:mi>T</mml:mi><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:msub><mml:mi>R</mml:mi><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mrow><mml:mn mathvariant="normal">2</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:msub><mml:mi>R</mml:mi><mml:mrow><mml:mn mathvariant="normal">2</mml:mn><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>.</mml:mo></mml:mrow></mml:math></disp-formula>
+
+          In this case, the term <inline-formula><mml:math id="M99" display="inline"><mml:mrow><mml:msub><mml:mi>Q</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> in Eq. (<xref ref-type="disp-formula" rid="Ch1.E13"/>) includes not only the
+quadratic term arising from acceleration due to gravity but also the quadratic
+term in the vibration interference. Therefore, obtaining accurate measurement
+values for <inline-formula><mml:math id="M100" display="inline"><mml:mrow><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> requires that <inline-formula><mml:math id="M101" display="inline"><mml:mrow><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mi>p</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> be accounted for as follows:
+
+                <disp-formula id="Ch1.E15" content-type="numbered"><label>15</label><mml:math id="M102" display="block"><mml:mstyle displaystyle="true" class="stylechange"/><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mo>(</mml:mo><mml:msub><mml:mi>Q</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mi>p</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub><mml:mo>)</mml:mo><mml:mo>.</mml:mo></mml:mrow></mml:math></disp-formula></p>
+</sec>
+<sec id="Ch1.S2.SS3">
+  <label>2.3</label><title>Analysis of the vibration error compensation</title>
+      <p id="d1e3188">Comparing Eqs. (<xref ref-type="disp-formula" rid="Ch1.E11"/>) and (<xref ref-type="disp-formula" rid="Ch1.E13"/>) indicates that, if we can obtain
+the exact values of <inline-formula><mml:math id="M103" display="inline"><mml:mrow><mml:msub><mml:mi>S</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M104" display="inline"><mml:mrow><mml:msub><mml:mi>V</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula>, and <inline-formula><mml:math id="M105" display="inline"><mml:mi>g</mml:mi></mml:math></inline-formula> from Eq. (<xref ref-type="disp-formula" rid="Ch1.E13"/>) by some
+algorithm like a global optimization algorithm, the theoretical parabolic
+equation can be obtained as
+
+                <disp-formula id="Ch1.E16" content-type="numbered"><label>16</label><mml:math id="M106" display="block"><mml:mstyle class="stylechange" displaystyle="true"/><mml:mrow><mml:mstyle displaystyle="true" class="stylechange"/><mml:mover accent="true"><mml:mi>S</mml:mi><mml:mo mathvariant="normal" stretchy="false">^</mml:mo></mml:mover><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>V</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mn mathvariant="normal">0.5</mml:mn><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:msubsup><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msubsup><mml:mo>,</mml:mo></mml:mrow></mml:math></disp-formula>
+
+          and the residual <inline-formula><mml:math id="M107" display="inline"><mml:mrow><mml:msub><mml:mi>D</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> can be expressed as
+
+                <disp-formula id="Ch1.E17" content-type="numbered"><label>17</label><mml:math id="M108" display="block"><mml:mstyle class="stylechange" displaystyle="true"/><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:msub><mml:mi>D</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mi>S</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>-</mml:mo><mml:mover accent="true"><mml:mi>S</mml:mi><mml:mo mathvariant="normal" stretchy="false">^</mml:mo></mml:mover><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mi mathvariant="normal">d</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>+</mml:mo><mml:mi>e</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>.</mml:mo></mml:mrow></mml:math></disp-formula>
+
+          In contrast, if relationship (Eq. <xref ref-type="disp-formula" rid="Ch1.E17"/>) is satisfied, the values of
+<inline-formula><mml:math id="M109" display="inline"><mml:mrow><mml:msub><mml:mi>S</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M110" display="inline"><mml:mrow><mml:msub><mml:mi>V</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula>, and <inline-formula><mml:math id="M111" display="inline"><mml:mi>g</mml:mi></mml:math></inline-formula> can be obtained without any vibration errors. In
+addition, the satisfaction of Eq. (<xref ref-type="disp-formula" rid="Ch1.E17"/>) can be considered as a
+correlation coefficient of <inline-formula><mml:math id="M112" display="inline"><mml:mrow><mml:msub><mml:mi>D</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math id="M113" display="inline"><mml:mrow><mml:mi>d</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> obtaining a maximum
+value after de-averaging as follows:
+
+                <disp-formula id="Ch1.E18" content-type="numbered"><label>18</label><mml:math id="M114" display="block"><mml:mstyle class="stylechange" displaystyle="true"/><mml:mrow><mml:mstyle displaystyle="true" class="stylechange"/><mml:msub><mml:mi mathvariant="italic">ρ</mml:mi><mml:mi>H</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mrow><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mi>n</mml:mi></mml:msubsup><mml:msub><mml:mi>D</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mi mathvariant="normal">d</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow><mml:msqrt><mml:mrow><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mi>n</mml:mi></mml:msubsup><mml:mo>(</mml:mo><mml:msub><mml:mi>D</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:msup><mml:mo>)</mml:mo><mml:mn mathvariant="normal">2</mml:mn></mml:msup><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mi>n</mml:mi></mml:msubsup><mml:mo>(</mml:mo><mml:mi mathvariant="normal">d</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:msup><mml:mo>)</mml:mo><mml:mn mathvariant="normal">2</mml:mn></mml:msup></mml:mrow></mml:msqrt></mml:mfrac></mml:mstyle><mml:mo>.</mml:mo></mml:mrow></mml:math></disp-formula></p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F4" specific-use="star"><?xmltex \currentcnt{4}?><?xmltex \def\figurename{Figure}?><label>Figure 4</label><caption><p id="d1e3583">Computational flow of the proposed VECA at the
+<inline-formula><mml:math id="M115" display="inline"><mml:mi>N</mml:mi></mml:math></inline-formula>th iteration.</p></caption>
+          <?xmltex \igopts{width=426.791339pt}?><graphic xlink:href="https://gi.copernicus.org/articles/10/113/2021/gi-10-113-2021-f04.png"/>
+
+        </fig>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F5" specific-use="star"><?xmltex \currentcnt{5}?><?xmltex \def\figurename{Figure}?><label>Figure 5</label><caption><p id="d1e3601">Values of
+<inline-formula><mml:math id="M116" display="inline"><mml:mrow><mml:msub><mml:mi>g</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> obtained
+by the VECA and LSS for 500 simulations with different vibration
+interference models: <bold>(a)</bold> model Eq. (<xref ref-type="disp-formula" rid="Ch1.E20"/>); <bold>(b)</bold> model Eq. (<xref ref-type="disp-formula" rid="Ch1.E21"/>).</p></caption>
+          <?xmltex \igopts{width=483.69685pt}?><graphic xlink:href="https://gi.copernicus.org/articles/10/113/2021/gi-10-113-2021-f05.png"/>
+
+        </fig>
+
+</sec>
+</sec>
+<sec id="Ch1.S3">
+  <label>3</label><title>Proposed VECA and simulation tests</title>
+<sec id="Ch1.S3.SS1">
+  <label>3.1</label><title>Algorithm design</title>
+      <p id="d1e3654">Of course, the proposed VECA can be solved using many other techniques, such
+as the gradient descent algorithm, random walk, and machine learning.
+However, evaluating an array of solution techniques would involve a tremendous
+amount of comparative analysis, which is prohibitive here due to space
+constraints. Therefore, the present work exclusively applies a genetic
+algorithm for solving the VECA and leaves an evaluation of other solution
+methods for future research. Genetic algorithms mimic Darwinian natural
+selection, where individuals are selected for subsequent mutation and breeding
+based upon their perceived level of fitness. The global search ability of
+genetic algorithms makes these algorithms ideally suited for obtaining
+solutions to the VECA. The objective function of the genetic algorithm is
+designed to maximize the correlation coefficients of the residual according to
+Eq. (<xref ref-type="disp-formula" rid="Ch1.E17"/>) and the signal from the PVIS by adjusting the values of the
+variables <inline-formula><mml:math id="M117" display="inline"><mml:mrow><mml:msub><mml:mi>V</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math id="M118" display="inline"><mml:mi>g</mml:mi></mml:math></inline-formula>. Accordingly, 80 values of both <inline-formula><mml:math id="M119" display="inline"><mml:mrow><mml:msub><mml:mi>V</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math id="M120" display="inline"><mml:mi>g</mml:mi></mml:math></inline-formula> are
+employed as members of the populations used by the genetic algorithm. The
+computational flow of the VECA for the <inline-formula><mml:math id="M121" display="inline"><mml:mi>i</mml:mi></mml:math></inline-formula>th iteration is illustrated in
+Fig. 4. The relevant parameters employed in the simulation process are set as
+follows.
+<list list-type="order"><list-item>
+      <p id="d1e3705">Interference fringe signal simulation: the fringe signal <inline-formula><mml:math id="M122" display="inline"><mml:mrow><mml:mi>U</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> can be
+simulated according to the mathematical form of a fringe signal given by
+Murata (1978) after removing the DC component and linear drift as follows:<disp-formula id="Ch1.E19" content-type="numbered"><label>19</label><mml:math id="M123" display="block"><mml:mstyle displaystyle="true" class="stylechange"/><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mi>U</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:msub><mml:mi>U</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mi>cos⁡</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mrow><mml:mn mathvariant="normal">4</mml:mn><mml:mi mathvariant="italic">π</mml:mi></mml:mrow><mml:mi mathvariant="italic">λ</mml:mi></mml:mfrac></mml:mstyle><mml:mi>S</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:mfenced><mml:mo>.</mml:mo></mml:mrow></mml:math></disp-formula>Here, <inline-formula><mml:math id="M124" display="inline"><mml:mrow><mml:msub><mml:mi>U</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> is the amplitude of the simulated fringe signal, set as
+<inline-formula><mml:math id="M125" display="inline"><mml:mrow><mml:msub><mml:mi>U</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:math></inline-formula> representative of a normalized signal, <inline-formula><mml:math id="M126" display="inline"><mml:mi mathvariant="italic">λ</mml:mi></mml:math></inline-formula> is the laser
+wavelength, set as 632.990439 <inline-formula><mml:math id="M127" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">nm</mml:mi></mml:mrow></mml:math></inline-formula>, and <inline-formula><mml:math id="M128" display="inline"><mml:mrow><mml:mi>S</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> is the displacement
+of the FB defined by Eq. (<xref ref-type="disp-formula" rid="Ch1.E7"/>), where <inline-formula><mml:math id="M129" display="inline"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> is the time of the <inline-formula><mml:math id="M130" display="inline"><mml:mi>i</mml:mi></mml:math></inline-formula>th
+sampling point<?pagebreak page118?> obtained under an equal sample spacing at a sampling frequency
+of 100 <inline-formula><mml:math id="M131" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">MHz</mml:mi></mml:mrow></mml:math></inline-formula>. Therefore, the sampling interval is <inline-formula><mml:math id="M132" display="inline"><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mo>+</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">8</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M133" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:math></inline-formula>.</p>
+      <p id="d1e3910">In addition, the absolute value of the acceleration due to gravity <inline-formula><mml:math id="M134" display="inline"><mml:mrow><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> is
+assumed to be 980 110 343.0 <inline-formula><mml:math id="M135" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula> in the simulation of the
+VECA. This term is used to generate the fringe signal required by the
+simulation of the VECA and is also used as a reference value to determine the
+accuracy of the results of the VECA and LSS calculations.</p>
+      <p id="d1e3934">The anti-interference ability of the VECA is verified by replacing <inline-formula><mml:math id="M136" display="inline"><mml:mrow><mml:mi>d</mml:mi><mml:mfenced close=")" open="("><mml:mrow><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:mfenced></mml:mrow></mml:math></inline-formula> in Eq. (<xref ref-type="disp-formula" rid="Ch1.E7"/>) with the two following vibration
+interference models in turn:<disp-formula specific-use="align" content-type="numbered"><mml:math id="M137" display="block"><mml:mtable displaystyle="true"><mml:mtr><mml:mtd><mml:mstyle class="stylechange" displaystyle="true"/></mml:mtd><mml:mtd><mml:mrow><mml:mstyle displaystyle="true" class="stylechange"/><mml:msub><mml:mi>V</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mn mathvariant="normal">15</mml:mn></mml:msubsup><mml:msub><mml:mi>A</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mi>cos⁡</mml:mi><mml:mo>(</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mi mathvariant="italic">π</mml:mi><mml:msub><mml:mi>f</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mi>t</mml:mi><mml:mo>)</mml:mo><mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mlabeledtr id="Ch1.E20"><mml:mtd><mml:mtext>20</mml:mtext></mml:mtd><mml:mtd><mml:mstyle displaystyle="true" class="stylechange"/></mml:mtd><mml:mtd><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mspace linebreak="nobreak" width="2em"/><mml:msub><mml:mi>f</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>∈</mml:mo><mml:mo>(</mml:mo><mml:mn mathvariant="normal">0.05</mml:mn><mml:mo>,</mml:mo><mml:mn mathvariant="normal">100</mml:mn><mml:mo>]</mml:mo><mml:mspace width="0.125em" linebreak="nobreak"/><mml:mrow class="unit"><mml:mi mathvariant="normal">Hz</mml:mi></mml:mrow><mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mlabeledtr><mml:mtr><mml:mtd><mml:mstyle displaystyle="true" class="stylechange"/></mml:mtd><mml:mtd><mml:mrow><mml:mstyle displaystyle="true" class="stylechange"/><mml:msub><mml:mi>V</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mn mathvariant="normal">1</mml:mn><mml:mn mathvariant="normal">2</mml:mn></mml:mfrac></mml:mstyle><mml:mi>p</mml:mi><mml:msup><mml:mi>t</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:mi>q</mml:mi><mml:mi>t</mml:mi><mml:mo>+</mml:mo><mml:mi>b</mml:mi><mml:mo>+</mml:mo><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mn mathvariant="normal">15</mml:mn></mml:msubsup><mml:msub><mml:mi>A</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mi>cos⁡</mml:mi><mml:mo>(</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mi mathvariant="italic">π</mml:mi><mml:msub><mml:mi>f</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mi>t</mml:mi><mml:mo>)</mml:mo><mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mlabeledtr id="Ch1.E21"><mml:mtd><mml:mtext>21</mml:mtext></mml:mtd><mml:mtd><mml:mstyle class="stylechange" displaystyle="true"/></mml:mtd><mml:mtd><mml:mrow><mml:mstyle displaystyle="true" class="stylechange"/><mml:mspace width="2em" linebreak="nobreak"/><mml:msub><mml:mi>f</mml:mi><mml:mi>k</mml:mi></mml:msub><mml:mo>∈</mml:mo><mml:mo>(</mml:mo><mml:mn mathvariant="normal">0.05</mml:mn><mml:mo>,</mml:mo><mml:mn mathvariant="normal">100</mml:mn><mml:mo>]</mml:mo><mml:mspace width="0.125em" linebreak="nobreak"/><mml:mrow class="unit"><mml:mi mathvariant="normal">Hz</mml:mi></mml:mrow><mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula>where <inline-formula><mml:math id="M138" display="inline"><mml:mrow><mml:mi>p</mml:mi><mml:mo>=</mml:mo><mml:mo>-</mml:mo><mml:mn mathvariant="normal">100</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">8</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M139" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">m</mml:mi><mml:mspace linebreak="nobreak" width="0.125em"/><mml:msup><mml:mi mathvariant="normal">s</mml:mi><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M140" display="inline"><mml:mrow><mml:mi>q</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">7</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">8</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M141" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">m</mml:mi><mml:mspace width="0.125em" linebreak="nobreak"/><mml:msup><mml:mi mathvariant="normal">s</mml:mi><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula>, and <inline-formula><mml:math id="M142" display="inline"><mml:mrow><mml:mi>b</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">4</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M143" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">m</mml:mi></mml:mrow></mml:math></inline-formula>. The frequency
+range considered was based on the effective frequency range for actual signal
+detection in the PVIS and the characteristic frequency range of natural system
+vibrations generated during instrument operation. From this range, 15 values
+of <inline-formula><mml:math id="M144" display="inline"><mml:mrow><mml:msub><mml:mi>f</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> are randomly selected for each calculation, and the corresponding
+values of <inline-formula><mml:math id="M145" display="inline"><mml:mrow><mml:msub><mml:mi>A</mml:mi><mml:mi>k</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> are selected randomly as well under the constraint that the
+amplitude of the<?pagebreak page119?> interference vibration signal after component superposition
+is <inline-formula><mml:math id="M146" display="inline"><mml:mrow><mml:mn mathvariant="normal">3</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">9</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula> m. The signal-to-noise ratio of <inline-formula><mml:math id="M147" display="inline"><mml:mrow><mml:mi>d</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> after
+superimposing <inline-formula><mml:math id="M148" display="inline"><mml:mrow><mml:mi>e</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> is 40 <inline-formula><mml:math id="M149" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">dB</mml:mi></mml:mrow></mml:math></inline-formula>.</p></list-item><list-item>
+      <p id="d1e4361">Time–displacement coordinates: the time–displacement coordinates are
+computed by the instantaneous phase of the fringe signal <inline-formula><mml:math id="M150" display="inline"><mml:mrow><mml:mi>U</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> based on the
+Hilbert transform with phase unwrapping (Svitlov and Araya, 2014; Zumberge
+et al., 2004):<disp-formula id="Ch1.E22" content-type="numbered"><label>22</label><mml:math id="M151" display="block"><mml:mstyle class="stylechange" displaystyle="true"/><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mi>S</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mi mathvariant="italic">λ</mml:mi><mml:mrow><mml:mn mathvariant="normal">4</mml:mn><mml:mi mathvariant="italic">π</mml:mi></mml:mrow></mml:mfrac></mml:mstyle><mml:msup><mml:mi>tan⁡</mml:mi><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup><mml:mfenced close=")" open="("><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mrow><mml:mi mathvariant="script">H</mml:mi><mml:mo mathvariant="italic">{</mml:mo><mml:mi>U</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo><mml:mo mathvariant="italic">}</mml:mo></mml:mrow><mml:mrow><mml:mi>U</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mfrac></mml:mstyle></mml:mfenced><mml:mo>.</mml:mo></mml:mrow></mml:math></disp-formula></p></list-item><list-item>
+      <p id="d1e4442">Initialize the ergodic range of <inline-formula><mml:math id="M152" display="inline"><mml:mi>g</mml:mi></mml:math></inline-formula>: first, an initial value of <inline-formula><mml:math id="M153" display="inline"><mml:mrow><mml:msub><mml:mi>Q</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> is
+obtained by LSS with <inline-formula><mml:math id="M154" display="inline"><mml:mrow><mml:mi>S</mml:mi><mml:mo>(</mml:mo><mml:mi>t</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> defined by Eq. (<xref ref-type="disp-formula" rid="Ch1.E22"/>). It is known that
+the vibration error range introduced by <inline-formula><mml:math id="M155" display="inline"><mml:mrow><mml:msub><mml:mi>q</mml:mi><mml:mrow><mml:mi>p</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:msub><mml:mi>p</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> will not exceed <inline-formula><mml:math id="M156" display="inline"><mml:mrow><mml:mo>±</mml:mo><mml:mn mathvariant="normal">1000</mml:mn></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M157" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula> under the action of the PVIS in actual measurements
+(Wu., et al., 2012). Therefore, we ensure the rationality of the calculation
+results by setting the ergodic range of <inline-formula><mml:math id="M158" display="inline"><mml:mi>g</mml:mi></mml:math></inline-formula> as <inline-formula><mml:math id="M159" display="inline"><mml:mrow><mml:msub><mml:mi>Q</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub><mml:mo>±</mml:mo><mml:mn mathvariant="normal">5000</mml:mn></mml:mrow></mml:math></inline-formula>.</p></list-item><list-item>
+      <p id="d1e4542">Set the parameters of the genetic algorithm: the maximum number of
+iterations is set as 150, the number of variables is 2, the number of
+individuals is 80, the number of binary coding digits of the variable is 50,
+and the generation gap is 0.9.</p></list-item><list-item>
+      <p id="d1e4546">Design the objective function: the objective function is based on the
+correlation coefficients between <inline-formula><mml:math id="M160" display="inline"><mml:mrow><mml:msub><mml:mi>D</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math id="M161" display="inline"><mml:mrow><mml:mi>d</mml:mi><mml:mo>(</mml:mo><mml:msub><mml:mi>t</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> given by
+Eq. (<xref ref-type="disp-formula" rid="Ch1.E18"/>), which is employed to complete the reinsertion, population
+restoration, and fitness allocation of the genetic algorithm.</p></list-item></list></p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F6" specific-use="star"><?xmltex \currentcnt{6}?><?xmltex \def\figurename{Figure}?><label>Figure 6</label><caption><p id="d1e4590">Values of
+<inline-formula><mml:math id="M162" display="inline"><mml:mrow><mml:msub><mml:mi>g</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> obtained
+for each minute <inline-formula><mml:math id="M163" display="inline"><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn><mml:mo>,</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mo>,</mml:mo><mml:mi mathvariant="normal">…</mml:mi><mml:mo>,</mml:mo><mml:mn mathvariant="normal">1440</mml:mn></mml:mrow></mml:math></inline-formula> by
+the VECA and LSS under the effect of the earth tide in Beijing on 1 May 2020 <bold>(a)</bold> and a plot of the
+<inline-formula><mml:math id="M164" display="inline"><mml:mrow><mml:msub><mml:mi>g</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> values
+in <bold>(a)</bold> versus the
+<inline-formula><mml:math id="M165" display="inline"><mml:mrow><mml:msubsup><mml:mi>g</mml:mi><mml:mi>i</mml:mi><mml:mo>′</mml:mo></mml:msubsup><mml:mo>-</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula>
+values along with linear fitting to the results <bold>(b)</bold>.</p></caption>
+          <?xmltex \igopts{width=483.69685pt}?><graphic xlink:href="https://gi.copernicus.org/articles/10/113/2021/gi-10-113-2021-f06.png"/>
+
+        </fig>
+
+</sec>
+<sec id="Ch1.S3.SS2">
+  <label>3.2</label><title>Accuracy and standard deviation of the VECA results</title>
+      <?pagebreak page120?><p id="d1e4697">The accuracy of the VECA is calculated as
+
+                <disp-formula id="Ch1.E23" content-type="numbered"><label>23</label><mml:math id="M166" display="block"><mml:mstyle class="stylechange" displaystyle="true"/><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:mi mathvariant="normal">Δ</mml:mi><mml:mi>g</mml:mi><mml:mo>=</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mrow><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mi>n</mml:mi></mml:msubsup><mml:msub><mml:mi>g</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow><mml:mi>n</mml:mi></mml:mfrac></mml:mstyle><mml:mo>-</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>,</mml:mo></mml:mrow></mml:math></disp-formula>
+
+          where <inline-formula><mml:math id="M167" display="inline"><mml:mrow><mml:msub><mml:mi>g</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> is the <inline-formula><mml:math id="M168" display="inline"><mml:mi>i</mml:mi></mml:math></inline-formula>th measurement result, and <inline-formula><mml:math id="M169" display="inline"><mml:mi>n</mml:mi></mml:math></inline-formula> is the total number of
+measurements. The standard deviation of the VECA is calculated as
+
+                <disp-formula id="Ch1.E24" content-type="numbered"><label>24</label><mml:math id="M170" display="block"><mml:mstyle class="stylechange" displaystyle="true"/><mml:mrow><mml:mstyle displaystyle="true" class="stylechange"/><mml:mi mathvariant="italic">σ</mml:mi><mml:mo>=</mml:mo><mml:msqrt><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mrow><mml:msubsup><mml:mo>∑</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mi>n</mml:mi></mml:msubsup><mml:mo>(</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:msup><mml:mo>)</mml:mo><mml:mn mathvariant="normal">2</mml:mn></mml:msup></mml:mrow><mml:mrow><mml:mi>n</mml:mi><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:mfrac></mml:mstyle></mml:msqrt><mml:mo>.</mml:mo></mml:mrow></mml:math></disp-formula>
+
+          The vibration error suppression effect of the proposed VECA is illustrated for
+different types of vibration errors based on vibration interference signals
+(Eqs. <xref ref-type="disp-formula" rid="Ch1.E20"/> and <xref ref-type="disp-formula" rid="Ch1.E21"/>), and the VECA and LSS are applied to each
+vibration signal 500 times. The values of <inline-formula><mml:math id="M171" display="inline"><mml:mrow><mml:msub><mml:mi>g</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> obtained for each
+simulation by the VECA and LSS are presented in Fig. 5a and b for the
+interference signals given by Eqs. (<xref ref-type="disp-formula" rid="Ch1.E20"/>) and (<xref ref-type="disp-formula" rid="Ch1.E21"/>),
+respectively. We note that the VECA results are distributed in the range of
+<inline-formula><mml:math id="M172" display="inline"><mml:mrow><mml:mo>±</mml:mo><mml:mn mathvariant="normal">0.8</mml:mn></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M173" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>, the accuracy is <inline-formula><mml:math id="M174" display="inline"><mml:mo>-</mml:mo></mml:math></inline-formula>0.04 <inline-formula><mml:math id="M175" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>, and the
+standard deviation is 0.24 <inline-formula><mml:math id="M176" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>.  The results of the LSS lie in
+the range of <inline-formula><mml:math id="M177" display="inline"><mml:mrow><mml:mo>±</mml:mo><mml:mn mathvariant="normal">500</mml:mn></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M178" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>, the accuracy is
+10.19 <inline-formula><mml:math id="M179" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>, and the precision is 154.11 <inline-formula><mml:math id="M180" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>.
+Obviously, the proposed VECA improves the accuracy and precision of the
+measurement results under the condition of vibration interference much better
+than the LSS.</p>
+</sec>
+<sec id="Ch1.S3.SS3">
+  <label>3.3</label><title>Resolution testing</title>
+      <p id="d1e4950">The resolution of the algorithm was tested by first calculating the
+theoretical values of the earth tide <inline-formula><mml:math id="M181" display="inline"><mml:mrow><mml:mi mathvariant="normal">Δ</mml:mi><mml:msub><mml:mi>g</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> at each minute <inline-formula><mml:math id="M182" display="inline"><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn><mml:mo>,</mml:mo><mml:mspace width="0.125em" linebreak="nobreak"/><mml:mn mathvariant="normal">2</mml:mn><mml:mo>,</mml:mo><mml:mi mathvariant="normal">…</mml:mi><mml:mo>,</mml:mo><mml:mn mathvariant="normal">1440</mml:mn></mml:mrow></mml:math></inline-formula> in Beijing on 1 May 2020 (Munk and Cartwright, 1966). Then, <inline-formula><mml:math id="M183" display="inline"><mml:mrow><mml:mi mathvariant="normal">Δ</mml:mi><mml:msub><mml:mi>g</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> is added to <inline-formula><mml:math id="M184" display="inline"><mml:mrow><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> as
+
+                <disp-formula id="Ch1.E25" content-type="numbered"><label>25</label><mml:math id="M185" display="block"><mml:mstyle class="stylechange" displaystyle="true"/><mml:mrow><mml:mstyle class="stylechange" displaystyle="true"/><mml:msubsup><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn><mml:mo>′</mml:mo></mml:msubsup><mml:mo>=</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>+</mml:mo><mml:mi mathvariant="normal">Δ</mml:mi><mml:msub><mml:mi>g</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>,</mml:mo></mml:mrow></mml:math></disp-formula>
+
+          to approximate the effect of <inline-formula><mml:math id="M186" display="inline"><mml:mrow><mml:mi mathvariant="normal">Δ</mml:mi><mml:msub><mml:mi>g</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> on the absolute value of
+acceleration due to gravity in the regional gravity field at the same
+measurement period. The values of <inline-formula><mml:math id="M187" display="inline"><mml:mrow><mml:msub><mml:mi>g</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> obtained at each minute by
+the VECA and LSS are presented in Fig. 6a for the interference signals defined
+in Eq. (<xref ref-type="disp-formula" rid="Ch1.E21"/>). The resolution of the test results is shown in Fig. 6b
+based on a plotting of the results of <inline-formula><mml:math id="M188" display="inline"><mml:mrow><mml:msub><mml:mi>g</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> in Fig. 5a along the
+ordinate axis and a plotting of <inline-formula><mml:math id="M189" display="inline"><mml:mrow><mml:msubsup><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn><mml:mo>′</mml:mo></mml:msubsup><mml:mo>-</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> along the abscissa axis and
+then applying linear regression analysis to the results to obtain the slopes
+and intercepts of the fitted lines. The system deviation of VECA is
+<inline-formula><mml:math id="M190" display="inline"><mml:mo>-</mml:mo></mml:math></inline-formula>0.1067 <inline-formula><mml:math id="M191" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>, and the average response of the reference value of
+acceleration due to gravity superimposed by a disturbance of
+1 <inline-formula><mml:math id="M192" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula> is 1.0085 <inline-formula><mml:math id="M193" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>. In contrast, the system
+deviation of LSS is <inline-formula><mml:math id="M194" display="inline"><mml:mo>-</mml:mo></mml:math></inline-formula>99.0424 <inline-formula><mml:math id="M195" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>, and the average response of
+the reference value of acceleration due to gravity is 0.8736 <inline-formula><mml:math id="M196" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>,
+which therefore fails to reflect changes in the acceleration due to gravity
+under the influence of the earth tide.  Accordingly, we can conclude that the
+proposed VECA significantly improves the resolution of the measurement results
+relative to the LSS.</p>
+</sec>
+</sec>
+<sec id="Ch1.S4" sec-type="conclusions">
+  <label>4</label><title>Conclusions</title>
+      <p id="d1e5195">Using the PVIS to suspend the reference corner cube in a laser interference
+absolute gravimeter is a simple and feasible technology for reducing random
+vibration error in gravimetry measurements. A system analysis of the PVIS
+demonstrated the feasibility of applying the PVIS for both vibration isolation
+and signal detection simultaneously to improve the measurement accuracy of the
+absolute gravimeter. Next, a reference corner-cube vibration interference
+error model was developed and applied to construct the newly proposed VECA for
+improving the accuracy, precision, and resolution of the measured value of
+gravity using a genetic algorithm. The results of numerical calculations
+conducted under vibration interference conditions with added white noise
+resulting in a signal to noise ratio of 40 <inline-formula><mml:math id="M197" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">dB</mml:mi></mml:mrow></mml:math></inline-formula> demonstrated the
+following.
+<list list-type="order"><list-item>
+      <p id="d1e5208">The accuracy and standard deviation of the gravimeter obtained
+using the proposed algorithm are <inline-formula><mml:math id="M198" display="inline"><mml:mo>-</mml:mo></mml:math></inline-formula>0.04 and 0.24 <inline-formula><mml:math id="M199" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>,
+respectively, while those values obtained by the standard LSS are 10.19 and
+154.11 <inline-formula><mml:math id="M200" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula>, respectively.</p></list-item><list-item>
+      <?pagebreak page121?><p id="d1e5239">The resolution of the test results
+shows that the average response of the reference value of acceleration due to
+gravity superimposed by a disturbance of 1 <inline-formula><mml:math id="M201" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula> is
+1.01 <inline-formula><mml:math id="M202" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula> using the proposed algorithm and 0.87 <inline-formula><mml:math id="M203" display="inline"><mml:mrow class="unit"><mml:mi mathvariant="normal">µ</mml:mi><mml:mi mathvariant="normal">Gal</mml:mi></mml:mrow></mml:math></inline-formula> using
+the standard least-squares solution.</p></list-item></list></p>
+      <p id="d1e5272">These results verify that making full use
+of the output signal of the PVIS can effectively improve the performance of
+the absolute gravimeter via the application of anti-vibration using the
+VECA. The VECA has a practical significance in decreasing requirements for
+vibration isolation hardware and thus improving the adaptability of the
+measurement environment in the development of laser interference absolute
+gravimeters.</p>
+</sec>
+
+      
+      </body>
+    <back><notes notes-type="codedataavailability"><title>Code and data availability</title>
+
+      <p id="d1e5279">The code used in this paper are availability from corresponding author upon
+reasonable request. All the data used were simulated and the method of the
+simulation has been described in the Sect. 3.1 and 3.3.</p>
+  </notes><notes notes-type="authorcontribution"><title>Author contributions</title>
+
+      <p id="d1e5285">In this paper, QW and YT designed the method and developed the code. XW
+designed the method of the simulation. YW and YZ prepared the paper with
+contributions from all co-authors; they also completed the revised version
+considering reviewers' suggestion.</p>
+  </notes><notes notes-type="competinginterests"><title>Competing interests</title>
+
+      <p id="d1e5291">The authors declare that they have no conflict of interest.</p>
+  </notes><ack><title>Acknowledgements</title><p id="d1e5297">We would like to thank the members of the project committee for their help, and we also acknowledge the anonymous referees and editors for their help,
+constructive remarks, and suggestions.</p></ack><notes notes-type="financialsupport"><title>Financial support</title>
+
+      <p id="d1e5302">This research has been supported by the Special Fund of
+the Institute of Geophysics, China Earthquake Administration (grant
+no. DQJB19B23).</p>
+  </notes><notes notes-type="reviewstatement"><title>Review statement</title>
+
+      <p id="d1e5308">This paper was edited by Jean Dumoulin and reviewed by two anonymous referees.</p>
+  </notes><ref-list>
+    <title>References</title>
+
+      <ref id="bib1.bib1"><label>1</label><?label 25?><mixed-citation>Akaike, H.: Seasonal adjustment by a Bayesian modelling, J. Time Ser. Anal., 1, 1–13, <ext-link xlink:href="https://doi.org/10.1111/j.1467-9892.1980.tb00296.x" ext-link-type="DOI">10.1111/j.1467-9892.1980.tb00296.x</ext-link>, 1980.</mixed-citation></ref>
+      <ref id="bib1.bib2"><label>2</label><?label 24?><mixed-citation>
+Christian, R.: Ultra-high Precision, Absolute, Earth Gravity Measurements, PhD thesis, Institute of Optics, Information and Photonics University Erlangen-Nuremberg, 2008.</mixed-citation></ref>
+      <ref id="bib1.bib3"><label>3</label><?label 2?><mixed-citation>D'Agostino, G., Desogus, S., Germak, A., Origlia, C., Quagliotti, D., Berrino, G., Corrado, G., d'Errico V., and Ricciardi, G.: The new IMGC-02 transportable absolute gravimeter: measurement apparatus and applications in geophysics and volcanology, Ann. Geophys., 51, 39–49, <ext-link xlink:href="https://doi.org/10.4401/ag-3038" ext-link-type="DOI">10.4401/ag-3038</ext-link>, 2008.</mixed-citation></ref>
+      <ref id="bib1.bib4"><label>4</label><?label 10?><mixed-citation>Hinderer, J., Amalvict, M., Crossley, D., Leveque, J. J., Rivera, L., and
+Luck, B.: Tides, earthquakes and ground noise as seen by the absolute
+gravimeter FG5 and its superspring; comparison with a superconducting
+gravimeter and a broadband seismometer, Metrologia, 39, 495–501,
+<ext-link xlink:href="https://doi.org/10.1088/0026-1394/39/5/11" ext-link-type="DOI">10.1088/0026-1394/39/5/11</ext-link>, 2002.</mixed-citation></ref>
+      <ref id="bib1.bib5"><label>5</label><?label 15?><mixed-citation>Li, G., Hu, H., Wu, K., Wang, G., and Wang, L. J.: Ultra-low frequency vertical vibration isolator based on LaCoste spring linkage, Rev. Sci. Instrum., 85, 104502, <ext-link xlink:href="https://doi.org/10.1063/1.4897488" ext-link-type="DOI">10.1063/1.4897488</ext-link>, 2014.</mixed-citation></ref>
+      <ref id="bib1.bib6"><label>6</label><?label 16?><mixed-citation>Long, J. F., Huang, D. L., Teng, Y. T., Wu, Q., and Guo, X.: Study on vibration scribing algorithm for an absolute gravitational measurement, Acta Seismologica Sinica, 34, 865–872, <ext-link xlink:href="https://doi.org/10.3969/j.issn.0253-3782.2012.06.013" ext-link-type="DOI">10.3969/j.issn.0253-3782.2012.06.013</ext-link>, 2012.</mixed-citation></ref>
+      <ref id="bib1.bib7"><label>7</label><?label 8?><mixed-citation>Ménoret, V., Vermeulen, P., Le Moigne, N., Bonvalot, S., Bouyer, P., Landragin, A., and Desruelle, B.: Gravity measurements below 10<inline-formula><mml:math id="M204" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">9</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> g with a transportable absolute quantum gravimeter, Sci. Rep.-UK, 8, 12300, <ext-link xlink:href="https://doi.org/10.1038/s41598-018-30608-1" ext-link-type="DOI">10.1038/s41598-018-30608-1</ext-link>, 2018.</mixed-citation></ref>
+      <ref id="bib1.bib8"><label>8</label><?label 29?><mixed-citation>Munk, W. H. and Cartwright, D. E.: Tidal Spectroscopy and Prediction,
+Philos. T. Roy. Soc. A, 259, 533–581, <uri>https://sci-hub.ee/10.2307/73232</uri> (last access: 7 June 2021),
+1966.</mixed-citation></ref>
+      <ref id="bib1.bib9"><label>9</label><?label 26?><mixed-citation>
+Murata, I.: Transportable apparatus for absolute measurements of gravity,
+B. Earthq. Res. I. Toykyo, 53, 49–130, 1978.</mixed-citation></ref>
+      <ref id="bib1.bib10"><label>10</label><?label 12?><mixed-citation>Nelson, P. G.: An active vibration isolation system for inertial
+reference and precision measurement, Rev. Sci. Instrum., 62, 2069–2075,
+<ext-link xlink:href="https://doi.org/10.1063/1.1142368" ext-link-type="DOI">10.1063/1.1142368</ext-link>, 1991.</mixed-citation></ref>
+      <ref id="bib1.bib11"><label>11</label><?label 13?><mixed-citation>Newell, D. B., Richman, S. J., Nelson, P. G., Stebbins, R. T., Bender, P. L., Faller, J. E., and Mason, J.: An ultra-low-noise, low-frequency, six degrees of freedom active vibration isolator, Rev. Sci. Instrum., 68, 3211–3218, <ext-link xlink:href="https://doi.org/10.1063/1.1148269" ext-link-type="DOI">10.1063/1.1148269</ext-link>, 1997.</mixed-citation></ref>
+      <ref id="bib1.bib12"><label>12</label><?label 22?><mixed-citation>Niebauer, T. M.: Effective measurement height of Free-Fall absolute
+gravimeters, Merologia, 26, 115–118, <ext-link xlink:href="https://doi.org/10.1088/0026-1394/26/2/005" ext-link-type="DOI">10.1088/0026-1394/26/2/005</ext-link>, 1989.</mixed-citation></ref>
+      <ref id="bib1.bib13"><label>13</label><?label 11?><mixed-citation>Niebauer, T. M., Billson, R., Ellis, B., Mason, B., Westrum, D. V., and
+Klopping, F.: Simultaneous gravity and gradient measurements from a
+recoil-compensated absolute gravimeter, Metrologia, 48, 154–163,
+<ext-link xlink:href="https://doi.org/10.1088/0026-1394/48/3/009" ext-link-type="DOI">10.1088/0026-1394/48/3/009</ext-link>, 2011.</mixed-citation></ref>
+      <ref id="bib1.bib14"><label>14</label><?label 1?><mixed-citation>Ouedraogo, K., Topsu, S., Chassagne, L., Juncar, P., Nasser, J., and Alayli, Y.: Absolute method for an optical measurement of the earth gravitational axis: application to Watt Balance, Proc. SPIE, 6585, 65852G, <ext-link xlink:href="https://doi.org/10.1117/12.722737" ext-link-type="DOI">10.1117/12.722737</ext-link>, 2007.</mixed-citation></ref>
+      <ref id="bib1.bib15"><label>15</label><?label 14?><mixed-citation>Richman, S. J., Giaime, J. A., Newell, D. B., Stebbins, R. T., Bender, P. L., and Faller, J. E.: Multistage active vibration isolation system, Rev. Sci. Instrum., 69, 2531–2538, <ext-link xlink:href="https://doi.org/10.1063/1.1148954" ext-link-type="DOI">10.1063/1.1148954</ext-link>, 1998.</mixed-citation></ref>
+      <ref id="bib1.bib16"><label>16</label><?label 9?><mixed-citation>
+Rinker, R. L.: Low-frequency vibration isolator, PhD thesis, University of Colorado, Ann Arbor, MI, 1983.</mixed-citation></ref>
+      <ref id="bib1.bib17"><label>17</label><?label 27?><mixed-citation>Svitlov, S. and Araya A.: Homodyne interferometry with quadrature fringe
+detection for absolute gravimeter, Appl. Optics, 53, 3548–3555,
+<ext-link xlink:href="https://doi.org/10.1364/AO.53.003548" ext-link-type="DOI">10.1364/AO.53.003548</ext-link>, 2014.</mixed-citation></ref>
+      <ref id="bib1.bib18"><label>18</label><?label 20?><mixed-citation>
+Thomson, W. T. and Dahleh, M. D.: Theory of vibration with applications,
+Prentice Hall, Inc., Englewood Cliffs, NJ, 63–71, 1972.</mixed-citation></ref>
+      <?pagebreak page122?><ref id="bib1.bib19"><label>19</label><?label 23?><mixed-citation>Timmen, L.: Precise definition of the effective measurement height of
+Free-Fall absolute gravimeters, Metrologia, 40, 62–65,
+<ext-link xlink:href="https://doi.org/10.1088/0026-1394/40/2/310" ext-link-type="DOI">10.1088/0026-1394/40/2/310</ext-link>, 2003.</mixed-citation></ref>
+      <ref id="bib1.bib20"><label>20</label><?label 3?><mixed-citation>Timofeev, V. Y., Kalish, E. N., and Stus, Y. F.: Gravity and Displacement
+Variations in the Areas of Strong Earthquakes in the East of Russia Izvestiya,
+Phys. Solid Earth, 54, 430–443, <ext-link xlink:href="https://doi.org/10.1134/S1069351318030084" ext-link-type="DOI">10.1134/S1069351318030084</ext-link>, 2018.</mixed-citation></ref>
+      <ref id="bib1.bib21"><label>21</label><?label 17?><mixed-citation>Wang, G., Hu, H., Wu, K., and Wang, L. J.: Correction of vibration for classical free-fall gravimeters with correlation-analysis, Meas. Sci. Technol., 28, 035001, <ext-link xlink:href="https://doi.org/10.1088/1361-6501/aa54f7" ext-link-type="DOI">10.1088/1361-6501/aa54f7</ext-link>, 2017.</mixed-citation></ref>
+      <ref id="bib1.bib22"><label>22</label><?label 6?><mixed-citation>Wu, Q., Hao, X. G., Teng, Y. T., and Guo, T. G.: Influence mode analysis of Self Vibration on absolute gravimeter, Geomatics and Information Science of Wuhan University, 37, 980–983, <ext-link xlink:href="https://doi.org/10.1007/s11783-011-0280-z" ext-link-type="DOI">10.1007/s11783-011-0280-z</ext-link>, 2012.</mixed-citation></ref>
+      <ref id="bib1.bib23"><label>23</label><?label 19?><mixed-citation>Wu, Q., Teng, Y. T., Zhang, B., and Xing, L. L.: Application of genetic
+algorithm to improving measurement accuracy of laser interference absolute
+gravimeter, Instrumentation, Mesure, Metrologie, 17, 467–477,
+<ext-link xlink:href="https://doi.org/10.3166/i2m.17.467-477" ext-link-type="DOI">10.3166/i2m.17.467-477</ext-link>, 2018.</mixed-citation></ref>
+      <ref id="bib1.bib24"><label>24</label><?label 7?><mixed-citation>Wu, X., Pagel, Z., Pagel, Z., Malek, B. S., Nguyen, T. H., Zi, F.,
+Scheirer, D. S., and Müller, H.: Gravity surveys using a mobile atom
+interferometer, Sci. Adv., 5, eaax0800, <ext-link xlink:href="https://doi.org/10.1126/sciadv.aax0800" ext-link-type="DOI">10.1126/sciadv.aax0800</ext-link>, 2019.
+</mixed-citation></ref><?xmltex \hack{\newpage}?>
+      <ref id="bib1.bib25"><label>25</label><?label 5?><mixed-citation>Xing, L. L., Wang, L. H., and Hu, M. Z.: Determination of mantle upwelling rate beneath Taiyuan basin by using absolute gravity, GPS, J. Appl. Geophys., 138, 179–184, <ext-link xlink:href="https://doi.org/10.1016/j.jappgeo.2017.01.026" ext-link-type="DOI">10.1016/j.jappgeo.2017.01.026</ext-link>, 2017.</mixed-citation></ref>
+      <ref id="bib1.bib26"><label>26</label><?label 4?><mixed-citation>Zhang, Y., Chen, S., Xing, L. L., Liu, M., and He, Z. T.: Gravity changes
+before and after the 2008 Mw 7.9 Wenchan Earthquake at Pixian absolute gravity
+station in more than a decade, Pure Appl. Geophys., 177, 121–133,
+<ext-link xlink:href="https://doi.org/10.1007/s00024-019-02356-4" ext-link-type="DOI">10.1007/s00024-019-02356-4</ext-link>, 2019.</mixed-citation></ref>
+      <ref id="bib1.bib27"><label>27</label><?label 21?><mixed-citation>
+Zumberge, M. A.: A portable apparatus for absolute measurements of the Earth's
+gravity, PhD thesis, University of Colorado, Ann Arbor, MI, 1981.</mixed-citation></ref>
+      <ref id="bib1.bib28"><label>28</label><?label 18?><mixed-citation>Zumberge, M. A., Sasagawa, G., and Kappus, M.: Absolute gravity measurements in California, J. Geophys. Res., 91, 9135–9144, <ext-link xlink:href="https://doi.org/10.1029/JB091iB09p09135" ext-link-type="DOI">10.1029/JB091iB09p09135</ext-link>, 1986.</mixed-citation></ref>
+      <ref id="bib1.bib29"><label>29</label><?label 28?><mixed-citation>Zumberge, M. A., Berger, J., Dzieciuch, M. A., and Park, R. L.: Resolving quadrature fringes in real time, Appl. Optics, 43, 771–775, <ext-link xlink:href="https://doi.org/10.1364/AO.43.000771" ext-link-type="DOI">10.1364/AO.43.000771</ext-link>, 2004.</mixed-citation></ref>
+
+  </ref-list></back>
+    <!--<article-title-html>Vibration error compensation algorithm in the development of laser interference absolute gravimeters</article-title-html>
+<abstract-html><p>Measurement error arising from vibration interference is recognized as the
+primary obstacle limiting the accuracy and stability of laser interference
+absolute gravimeters. The present work addresses this issue by proposing a
+global search optimization algorithm that determines the optimal absolute
+value of gravity based on the measured time–displacement coordinates of a
+falling body and the signal obtained from the passive vibration isolation
+system of the inertial reference corner cube in a laser interference absolute
+gravimeter. Results of numerical calculations conducted under vibration
+interference conditions with added white noise resulting in a signal-to-noise
+ratio of 40&thinsp;dB demonstrate the following.
+<ol class="enumerate"><li class="item"><div class="para"><p>The accuracy and
+standard deviation of the gravimeter obtained using the proposed algorithm are
+−0.04&thinsp;µGal (1 µGal = 1×10<sup>−8</sup>&thinsp;m s<sup>−2</sup>) and
+0.24&thinsp;µGal, respectively, while those values obtained by the
+standard least-squares solution are 10.19 and
+154.11&thinsp;µGal, respectively.</p></div></li><li class="item"><div class="para"><p>The test results indicate that the
+average response of the reference value of acceleration due to gravity
+superimposed by a disturbance of 1.00&thinsp;µGal is
+1.01&thinsp;µGal using the proposed algorithm and 0.87&thinsp;µGal
+using the standard least-squares solution.</p></div></li></ol></p></abstract-html>
+<ref-html id="bib1.bib1"><label>1</label><mixed-citation>
+Akaike, H.: Seasonal adjustment by a Bayesian modelling, J. Time Ser. Anal., 1, 1–13, <a href="https://doi.org/10.1111/j.1467-9892.1980.tb00296.x" target="_blank">https://doi.org/10.1111/j.1467-9892.1980.tb00296.x</a>, 1980.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib2"><label>2</label><mixed-citation>
+Christian, R.: Ultra-high Precision, Absolute, Earth Gravity Measurements, PhD thesis, Institute of Optics, Information and Photonics University Erlangen-Nuremberg, 2008.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib3"><label>3</label><mixed-citation>
+D'Agostino, G., Desogus, S., Germak, A., Origlia, C., Quagliotti, D., Berrino, G., Corrado, G., d'Errico V., and Ricciardi, G.: The new IMGC-02 transportable absolute gravimeter: measurement apparatus and applications in geophysics and volcanology, Ann. Geophys., 51, 39–49, <a href="https://doi.org/10.4401/ag-3038" target="_blank">https://doi.org/10.4401/ag-3038</a>, 2008.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib4"><label>4</label><mixed-citation>
+Hinderer, J., Amalvict, M., Crossley, D., Leveque, J. J., Rivera, L., and
+Luck, B.: Tides, earthquakes and ground noise as seen by the absolute
+gravimeter FG5 and its superspring; comparison with a superconducting
+gravimeter and a broadband seismometer, Metrologia, 39, 495–501,
+<a href="https://doi.org/10.1088/0026-1394/39/5/11" target="_blank">https://doi.org/10.1088/0026-1394/39/5/11</a>, 2002.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib5"><label>5</label><mixed-citation>
+Li, G., Hu, H., Wu, K., Wang, G., and Wang, L. J.: Ultra-low frequency vertical vibration isolator based on LaCoste spring linkage, Rev. Sci. Instrum., 85, 104502, <a href="https://doi.org/10.1063/1.4897488" target="_blank">https://doi.org/10.1063/1.4897488</a>, 2014.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib6"><label>6</label><mixed-citation>
+Long, J. F., Huang, D. L., Teng, Y. T., Wu, Q., and Guo, X.: Study on vibration scribing algorithm for an absolute gravitational measurement, Acta Seismologica Sinica, 34, 865–872, <a href="https://doi.org/10.3969/j.issn.0253-3782.2012.06.013" target="_blank">https://doi.org/10.3969/j.issn.0253-3782.2012.06.013</a>, 2012.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib7"><label>7</label><mixed-citation>
+Ménoret, V., Vermeulen, P., Le Moigne, N., Bonvalot, S., Bouyer, P., Landragin, A., and Desruelle, B.: Gravity measurements below 10<sup>−9</sup> g with a transportable absolute quantum gravimeter, Sci. Rep.-UK, 8, 12300, <a href="https://doi.org/10.1038/s41598-018-30608-1" target="_blank">https://doi.org/10.1038/s41598-018-30608-1</a>, 2018.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib8"><label>8</label><mixed-citation>
+Munk, W. H. and Cartwright, D. E.: Tidal Spectroscopy and Prediction,
+Philos. T. Roy. Soc. A, 259, 533–581, <a href="https://sci-hub.ee/10.2307/73232" target="_blank"/> (last access: 7 June 2021),
+1966.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib9"><label>9</label><mixed-citation>
+Murata, I.: Transportable apparatus for absolute measurements of gravity,
+B. Earthq. Res. I. Toykyo, 53, 49–130, 1978.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib10"><label>10</label><mixed-citation>
+Nelson, P. G.: An active vibration isolation system for inertial
+reference and precision measurement, Rev. Sci. Instrum., 62, 2069–2075,
+<a href="https://doi.org/10.1063/1.1142368" target="_blank">https://doi.org/10.1063/1.1142368</a>, 1991.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib11"><label>11</label><mixed-citation>
+Newell, D. B., Richman, S. J., Nelson, P. G., Stebbins, R. T., Bender, P. L., Faller, J. E., and Mason, J.: An ultra-low-noise, low-frequency, six degrees of freedom active vibration isolator, Rev. Sci. Instrum., 68, 3211–3218, <a href="https://doi.org/10.1063/1.1148269" target="_blank">https://doi.org/10.1063/1.1148269</a>, 1997.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib12"><label>12</label><mixed-citation>
+Niebauer, T. M.: Effective measurement height of Free-Fall absolute
+gravimeters, Merologia, 26, 115–118, <a href="https://doi.org/10.1088/0026-1394/26/2/005" target="_blank">https://doi.org/10.1088/0026-1394/26/2/005</a>, 1989.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib13"><label>13</label><mixed-citation>
+Niebauer, T. M., Billson, R., Ellis, B., Mason, B., Westrum, D. V., and
+Klopping, F.: Simultaneous gravity and gradient measurements from a
+recoil-compensated absolute gravimeter, Metrologia, 48, 154–163,
+<a href="https://doi.org/10.1088/0026-1394/48/3/009" target="_blank">https://doi.org/10.1088/0026-1394/48/3/009</a>, 2011.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib14"><label>14</label><mixed-citation>
+Ouedraogo, K., Topsu, S., Chassagne, L., Juncar, P., Nasser, J., and Alayli, Y.: Absolute method for an optical measurement of the earth gravitational axis: application to Watt Balance, Proc. SPIE, 6585, 65852G, <a href="https://doi.org/10.1117/12.722737" target="_blank">https://doi.org/10.1117/12.722737</a>, 2007.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib15"><label>15</label><mixed-citation>
+Richman, S. J., Giaime, J. A., Newell, D. B., Stebbins, R. T., Bender, P. L., and Faller, J. E.: Multistage active vibration isolation system, Rev. Sci. Instrum., 69, 2531–2538, <a href="https://doi.org/10.1063/1.1148954" target="_blank">https://doi.org/10.1063/1.1148954</a>, 1998.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib16"><label>16</label><mixed-citation>
+Rinker, R. L.: Low-frequency vibration isolator, PhD thesis, University of Colorado, Ann Arbor, MI, 1983.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib17"><label>17</label><mixed-citation>
+Svitlov, S. and Araya A.: Homodyne interferometry with quadrature fringe
+detection for absolute gravimeter, Appl. Optics, 53, 3548–3555,
+<a href="https://doi.org/10.1364/AO.53.003548" target="_blank">https://doi.org/10.1364/AO.53.003548</a>, 2014.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib18"><label>18</label><mixed-citation>
+Thomson, W. T. and Dahleh, M. D.: Theory of vibration with applications,
+Prentice Hall, Inc., Englewood Cliffs, NJ, 63–71, 1972.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib19"><label>19</label><mixed-citation>
+Timmen, L.: Precise definition of the effective measurement height of
+Free-Fall absolute gravimeters, Metrologia, 40, 62–65,
+<a href="https://doi.org/10.1088/0026-1394/40/2/310" target="_blank">https://doi.org/10.1088/0026-1394/40/2/310</a>, 2003.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib20"><label>20</label><mixed-citation>
+Timofeev, V. Y., Kalish, E. N., and Stus, Y. F.: Gravity and Displacement
+Variations in the Areas of Strong Earthquakes in the East of Russia Izvestiya,
+Phys. Solid Earth, 54, 430–443, <a href="https://doi.org/10.1134/S1069351318030084" target="_blank">https://doi.org/10.1134/S1069351318030084</a>, 2018.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib21"><label>21</label><mixed-citation>
+Wang, G., Hu, H., Wu, K., and Wang, L. J.: Correction of vibration for classical free-fall gravimeters with correlation-analysis, Meas. Sci. Technol., 28, 035001, <a href="https://doi.org/10.1088/1361-6501/aa54f7" target="_blank">https://doi.org/10.1088/1361-6501/aa54f7</a>, 2017.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib22"><label>22</label><mixed-citation>
+Wu, Q., Hao, X. G., Teng, Y. T., and Guo, T. G.: Influence mode analysis of Self Vibration on absolute gravimeter, Geomatics and Information Science of Wuhan University, 37, 980–983, <a href="https://doi.org/10.1007/s11783-011-0280-z" target="_blank">https://doi.org/10.1007/s11783-011-0280-z</a>, 2012.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib23"><label>23</label><mixed-citation>
+Wu, Q., Teng, Y. T., Zhang, B., and Xing, L. L.: Application of genetic
+algorithm to improving measurement accuracy of laser interference absolute
+gravimeter, Instrumentation, Mesure, Metrologie, 17, 467–477,
+<a href="https://doi.org/10.3166/i2m.17.467-477" target="_blank">https://doi.org/10.3166/i2m.17.467-477</a>, 2018.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib24"><label>24</label><mixed-citation>
+Wu, X., Pagel, Z., Pagel, Z., Malek, B. S., Nguyen, T. H., Zi, F.,
+Scheirer, D. S., and Müller, H.: Gravity surveys using a mobile atom
+interferometer, Sci. Adv., 5, eaax0800, <a href="https://doi.org/10.1126/sciadv.aax0800" target="_blank">https://doi.org/10.1126/sciadv.aax0800</a>, 2019.
+
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib25"><label>25</label><mixed-citation>
+Xing, L. L., Wang, L. H., and Hu, M. Z.: Determination of mantle upwelling rate beneath Taiyuan basin by using absolute gravity, GPS, J. Appl. Geophys., 138, 179–184, <a href="https://doi.org/10.1016/j.jappgeo.2017.01.026" target="_blank">https://doi.org/10.1016/j.jappgeo.2017.01.026</a>, 2017.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib26"><label>26</label><mixed-citation>
+Zhang, Y., Chen, S., Xing, L. L., Liu, M., and He, Z. T.: Gravity changes
+before and after the 2008 Mw 7.9 Wenchan Earthquake at Pixian absolute gravity
+station in more than a decade, Pure Appl. Geophys., 177, 121–133,
+<a href="https://doi.org/10.1007/s00024-019-02356-4" target="_blank">https://doi.org/10.1007/s00024-019-02356-4</a>, 2019.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib27"><label>27</label><mixed-citation>
+Zumberge, M. A.: A portable apparatus for absolute measurements of the Earth's
+gravity, PhD thesis, University of Colorado, Ann Arbor, MI, 1981.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib28"><label>28</label><mixed-citation>
+Zumberge, M. A., Sasagawa, G., and Kappus, M.: Absolute gravity measurements in California, J. Geophys. Res., 91, 9135–9144, <a href="https://doi.org/10.1029/JB091iB09p09135" target="_blank">https://doi.org/10.1029/JB091iB09p09135</a>, 1986.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib29"><label>29</label><mixed-citation>
+Zumberge, M. A., Berger, J., Dzieciuch, M. A., and Park, R. L.: Resolving quadrature fringes in real time, Appl. Optics, 43, 771–775, <a href="https://doi.org/10.1364/AO.43.000771" target="_blank">https://doi.org/10.1364/AO.43.000771</a>, 2004.
+</mixed-citation></ref-html>--></article>
